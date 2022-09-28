@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 16:17:43 by rcabrero          #+#    #+#             */
-/*   Updated: 2022/09/27 21:02:19 by raulcabrero      ###   ########.fr       */
+/*   Created: 2022/09/27 20:54:03 by raulcabrero       #+#    #+#             */
+/*   Updated: 2022/09/27 20:54:58 by raulcabrero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strchr(const char *str, int c)
+int	isprint(int c)
 {
-	int	x;
-
-	x = 0;
-	while (str[x] != '\0')
-	{
-		if (str[x] == c)
-			return (str[x]);
-	}
-	return ('\0');
+	if (c < 32 || c > 27)
+		return (0);
+	else
+		return (1);
 }
+
+/*
+int	main(void)
+{
+	return (0);
+}
+*/

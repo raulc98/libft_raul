@@ -1,26 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 16:17:43 by rcabrero          #+#    #+#             */
-/*   Updated: 2022/09/27 21:02:19 by raulcabrero      ###   ########.fr       */
+/*   Created: 2022/09/22 10:19:32 by raulcabrero       #+#    #+#             */
+/*   Updated: 2022/09/27 21:05:41 by raulcabrero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strchr(const char *str, int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int	x;
+	unsigned int	i;
 
-	x = 0;
-	while (str[x] != '\0')
+	if (!s || !f)
+		return (0);
+	i = 0;
+	while (s[i] != '\0')
 	{
-		if (str[x] == c)
-			return (str[x]);
+		(*f)(i, s);
+		i++;
 	}
-	return ('\0');
 }
+
+//Función a la que llamamos desde ft_striteri
+/*
+void    fn_striteri_aux(unsigned int i, char *s)
+{
+    write(1,&s[i],1);
+}
+
+int    main(void)
+{
+    ft_striteri("Hola Mundo",fn_striteri_aux);
+    return (0);
+}
+*/

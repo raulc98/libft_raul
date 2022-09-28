@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rcabrero <rcabrero@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 15:53:17 by rcabrero          #+#    #+#             */
-/*   Updated: 2022/09/14 16:17:28 by rcabrero         ###   ########.fr       */
+/*   Updated: 2022/09/27 21:15:24 by raulcabrero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int toupper(int caracter)
+int	toupper(int caracter)
 {
 	if (caracter >= 97 || caracter <= 122)
-		return(caracter - 32);
+		return (caracter - 32);
 	return (0);
 }

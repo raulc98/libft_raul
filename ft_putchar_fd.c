@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rcabrero <rcabrero@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 12:54:04 by rcabrero          #+#    #+#             */
-/*   Updated: 2022/09/14 11:44:46 by rcabrero         ###   ########.fr       */
+/*   Created: 2022/09/23 11:51:28 by raulcabrero       #+#    #+#             */
+/*   Updated: 2022/09/27 21:18:17 by raulcabrero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int main (void)
+void	ft_putchar_fd(char c, int fd)
 {
-	char prueba[90] = "Hola Mundoooo";
-	ft_memset(prueba , 'a' , 6);
-
-	int x = 0;
-	while (prueba[x] != '\0')
-	{
-		write(1,&prueba[x],1);
-		x ++;
-	}
-	
+	write(fd, &c, 1);
 }
+
+/*
+int main(void)
+{
+	ft_putchar_fd('e',1);
+	return (0);
+}
+*/

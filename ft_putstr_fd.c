@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 16:17:43 by rcabrero          #+#    #+#             */
-/*   Updated: 2022/09/27 21:02:19 by raulcabrero      ###   ########.fr       */
+/*   Created: 2022/09/23 13:55:40 by raulcabrero       #+#    #+#             */
+/*   Updated: 2022/09/27 20:45:19 by raulcabrero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strchr(const char *str, int c)
+void	ft_putstr_fd(char *s, int fd)
 {
-	int	x;
+	int	i;
 
-	x = 0;
-	while (str[x] != '\0')
+	i = 0;
+	if (s == NULL)
+		return (0);
+	while (s[i] != '\0')
 	{
-		if (str[x] == c)
-			return (str[x]);
+		write(fd, &s[i], 1);
+		fd ++;
+		i ++;
 	}
-	return ('\0');
 }
+
+/*
+int main(void)
+{
+    return(0);
+}
+*/

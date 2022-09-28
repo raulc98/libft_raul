@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 16:17:43 by rcabrero          #+#    #+#             */
-/*   Updated: 2022/09/27 21:02:19 by raulcabrero      ###   ########.fr       */
+/*   Created: 2022/09/27 19:46:22 by raulcabrero       #+#    #+#             */
+/*   Updated: 2022/09/27 20:56:52 by raulcabrero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// #include "libft.h"
 
-char	*strchr(const char *str, int c)
+//BONUS
+
+// TODO: PRUEBAAAA
+// typedef struct  s_list
+// {
+//     void			*content;
+//     struct s_list	*next;
+// }			t_list;
+
+// t_list *ft_lstnew(void *content)
+// {
+// 	//declaro una estructura de tipo t_list
+// 	t_list *list;
+// 	//declaro y lo pongo a null
+// 	//TODO: Lo mismo no vale.
+// 	list = NULL;
+// }
+
+/*
+int	main(void)
 {
-	int	x;
-
-	x = 0;
-	while (str[x] != '\0')
-	{
-		if (str[x] == c)
-			return (str[x]);
-	}
-	return ('\0');
+	return (0);
 }
+*/

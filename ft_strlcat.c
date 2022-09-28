@@ -3,22 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rcabrero <rcabrero@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 13:30:20 by rcabrero          #+#    #+#             */
-/*   Updated: 2022/09/14 15:52:29 by rcabrero         ###   ########.fr       */
+/*   Updated: 2022/09/27 21:24:13 by raulcabrero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
-//TODO: BORRAR
-//#include <string.h>
 
-void ft_strlcat(char *dst, const char *src, size_t size)
+void	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t length;
-	size_t x;
+	size_t	length;
+	size_t	x;
+
 	length = 0;
 	while (dst[length] != '\0')
 		length ++;
