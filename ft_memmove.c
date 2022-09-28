@@ -6,7 +6,7 @@
 /*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 13:04:50 by rcabrero          #+#    #+#             */
-/*   Updated: 2022/09/27 21:23:31 by raulcabrero      ###   ########.fr       */
+/*   Updated: 2022/09/28 19:12:36 by raulcabrero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,5 @@ void	*ft_memmove(void *str1, const void *str2, size_t n)
 		((unsigned char *) str1)[x] = ((unsigned char *) aux)[x];
 		x ++;
 	}
+	return (str1);
 }
