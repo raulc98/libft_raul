@@ -7,11 +7,11 @@
 #include <unistd.h>
 
 # ifndef BUFFER_SIZE
-# 	define BUFFER_SIZE 5000
+# define BUFFER_SIZE 5000
 # endif
 
 # ifndef OPEN_MAX
-#  define OPEN_MAX 32
+# define OPEN_MAX 32
 # endif
 
 int				ft_isalpha(int c);
@@ -36,10 +36,10 @@ void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			ft_bzero(void *s, size_t n);
 
-int				ft_toupper(int c);
-int				ft_tolower(int c);
-int				ft_atoi(const char *nptr);
-void			*ft_calloc(size_t nmemb, size_t size);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+int		ft_atoi(const char *nptr);
+void	*ft_calloc(size_t nitems, size_t len);
 
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);

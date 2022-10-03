@@ -30,7 +30,8 @@ SRCS =      ft_atoi.c \
             ft_strtrim.c \
             ft_substr.c \
             ft_tolower.c \
-            ft_toupper.c
+            ft_toupper.c \
+			ft_split.c
 OBJS    =   ${SRCS:.c=.o}
 OBJSB   =   ${SRCSB:.c=.o}
 CC  =   gcc -Wall -Wextra -Werror
