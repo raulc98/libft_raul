@@ -6,7 +6,7 @@
 /*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 22:34:06 by raulcabrero       #+#    #+#             */
-/*   Updated: 2022/10/03 19:07:10 by raulcabrero      ###   ########.fr       */
+/*   Updated: 2022/10/03 19:39:04 by raulcabrero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 static int	count_words(const char *str, char c)
 {
 	int i;
+	//TODO: CAMBIAR NOMBRE DE TIGGER
 	int trigger;
 
 	i = 0;
