@@ -6,12 +6,19 @@
 /*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:07:12 by raulcabrero       #+#    #+#             */
-/*   Updated: 2022/09/27 21:15:48 by raulcabrero      ###   ########.fr       */
+/*   Updated: 2022/10/02 19:02:30 by raulcabrero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// // void ft_putendl_fd(char *s, int fd)
+void ft_putendl_fd(char *s, int fd)
+{
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
+}
+
+// int	main (void)
 // {
+// 	return(0);
 // }

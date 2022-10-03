@@ -6,23 +6,47 @@
 /*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:48:57 by rcabrero          #+#    #+#             */
-/*   Updated: 2022/09/27 21:19:33 by raulcabrero      ###   ########.fr       */
+/*   Updated: 2022/10/01 21:00:25 by raulcabrero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	strncmp(const char *str1, const char *str2, size_t n)
-{
-	int	str1_length;
-	int	str2_length;
+/*
+	s1 -> el primer string a comparar
+	s2 -> el segundo string a comparar
+	n −> Número maximo de caracteres a comparar.
+*/
 
-	str1_length = ft_strlen(str1);
-	str2_length = ft_strlen(str2);
-	if (str1_length > str2_length)
-		return (1);
-	else if (str1_length > str2_length)
+int				ft_strncmp(char *s1, char *s2, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (s1[i] && i < n)
+	{
+		if (s1[i] != s2[i])
+		{
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		}
+		i++;
+	}
+	if (s2[i] == '\0' || i == n)
 		return (0);
 	else
-		return (0);
+		return (-s2[i]);
 }
+//TODO: BORRAR O COMENTAR
+/*
+#include <string.h>
+#include <stdio.h>
+
+int	main(void)
+{
+	int	original;
+	//int	mio;
+	original = strncmp("Pepew", "Pepee", 5);
+	printf("%i", original);
+	return (0);
+}
+*/

@@ -6,28 +6,63 @@
 /*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 13:04:50 by rcabrero          #+#    #+#             */
-/*   Updated: 2022/09/28 19:12:36 by raulcabrero      ###   ########.fr       */
+/*   Updated: 2022/10/02 22:38:14 by raulcabrero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *str1, const void *str2, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	x;
-	char	aux[n];
+	unsigned int	i;
 
-	x = 0;
-	while (x <= n)
+	if (!dst && !src)
+		return (NULL);
+	if (dst > src)
 	{
-		((unsigned char *) aux)[x] = ((unsigned char *) str2)[x];
-		x ++;
+		while (len > 0)
+		{
+			((char *)dst)[len - 1] = ((char *)src)[len - 1];
+			len--;
+		}
 	}
-	x = 0;
-	while (x <= n)
+	else
 	{
-		((unsigned char *) str1)[x] = ((unsigned char *) aux)[x];
-		x ++;
+		i = 0;
+		while (i < len)
+		{
+			((char *)dst)[i] = ((char *)src)[i];
+			i++;
+		}
 	}
-	return (str1);
+	return (dst);
 }
+/*
+#include <string.h>
+#include <stdio.h>
+int	main(void)
+{
+	char	str[10];
+	int i = 0;
+	while (i < 10)
+	{
+		str[i] = '\0';
+		i ++;
+	}
+	//MEMMOVE ORIGINAL
+	memmove(str, "Hola mundo que tal", 5);
+	printf("Memmove normal: %s",str);
+	printf("\n");
+	char	prueba[10];
+	i = 0;
+	while (i < 10)
+	{
+		prueba[i] = '\0';
+		i ++;
+	}
+	ft_memmove(prueba, "Hola mundo que tal", 5);
+	printf("Memmove Mio: %s",prueba);
+	printf("\n");
+	return (0);
+}
+*/

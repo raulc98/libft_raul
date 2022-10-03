@@ -6,7 +6,7 @@
 /*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 10:19:32 by raulcabrero       #+#    #+#             */
-/*   Updated: 2022/09/27 21:05:41 by raulcabrero      ###   ########.fr       */
+/*   Updated: 2022/10/02 18:55:44 by raulcabrero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	unsigned int	i;
 
 	if (!s || !f)
-		return (0);
+		return ;
 	i = 0;
 	while (s[i] != '\0')
 	{
-		(*f)(i, s);
+		f(i, &s[i]);
 		i++;
 	}
 }

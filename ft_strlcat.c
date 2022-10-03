@@ -6,57 +6,51 @@
 /*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 13:30:20 by rcabrero          #+#    #+#             */
-/*   Updated: 2022/09/27 21:24:13 by raulcabrero      ###   ########.fr       */
+/*   Updated: 2022/10/01 20:19:07 by raulcabrero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	length;
-	size_t	x;
+	size_t	len_dst;
+	size_t	len_src;
+	size_t	i;
 
-	length = 0;
-	while (dst[length] != '\0')
-		length ++;
-	x = 0;
-	while (length != size)
+	len_dst = ft_strlen(dst);
+	len_src = ft_strlen(src);
+	if (size == 0)
+		return (len_src);
+	if (size < len_dst)
+		len_src += size;
+	else
+		len_src += len_dst;
+	i = 0;
+	while (src[i] != '\0' && (len_dst + i) < size - 1)
 	{
-		if (x != size)
-			dst[length] = src[x];
-		else
-			dst[length] = '\0';
-		length ++;
-		x ++;
+		dst[len_dst + i] = src[i];
+		i++;
 	}
+	dst[len_dst + i] = '\0';
+	return (len_src);
 }
 
-//TODO_ FALTA PROBAR
-// int main(void)
-// {
-// 	//size_t
-// 	char dst[10] = "Hola que";
-// 	char src[10] = "ADIOS TO";
-// 	size_t resultado = 0;
-// 	resultado = strlcpy(dst,src, 10);
+/*
+#include <stdio.h>
+#include <string.h>
 
-// 	int x = 0;
-// 	while (x < 10)
-// 	{
-// 		write(1,&dst[x],1);
-// 		x ++;
-// 	}
-
-// 	char dst1[10] = "Hola que";
-// 	char src1[10] = "ADIOS TO";
-// 	write(1,"--",2);
-// 	resultado = strlcat(dst1,src1, 10);
-// 	x = 0;
-// 	while (x < 10)
-// 	{
-// 		write(1,&dst1[x],1);
-// 		x ++;
-// 	}
-// 	return (0);
-// }
+int	main(void)
+{
+	char	str[10] = "Hola";
+	char	str2[10] = "Hola";
+	size_t uno;
+	size_t dos;
+	uno = strlcat(str,"Que tall",8);
+	dos = ft_strlcat(str2,"Que tall",8);
+	printf("Prueba 1: %s" , str);
+	printf("\n");
+	printf("Prueba 2: %s" , str2);
+	return (0);
+}
+*/
