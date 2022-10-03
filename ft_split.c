@@ -6,7 +6,7 @@
 /*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 22:34:06 by raulcabrero       #+#    #+#             */
-/*   Updated: 2022/10/03 19:05:31 by raulcabrero      ###   ########.fr       */
+/*   Updated: 2022/10/03 19:07:10 by raulcabrero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ char		**ft_split(char const *s, char c)
 		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
 		{
 			//guardamos en la posicion split[j] la palabra
-			split[j] = word_dup(s, index, i);c
+			split[j] = word_dup(s, index, i);
 			j ++;
 			index = -1;
 		}
