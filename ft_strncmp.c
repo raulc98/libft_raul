@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
+/*   By: rcabrero <rcabrero@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:48:57 by rcabrero          #+#    #+#             */
-/*   Updated: 2022/10/01 21:00:25 by raulcabrero      ###   ########.fr       */
+/*   Updated: 2022/10/06 17:31:03 by rcabrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 	n −> Número maximo de caracteres a comparar.
 */
 
-int				ft_strncmp(char *s1, char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 

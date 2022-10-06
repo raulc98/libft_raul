@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rcabrero <rcabrero@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 19:16:35 by raulcabrero       #+#    #+#             */
-/*   Updated: 2022/10/06 11:31:49 by rcabrero         ###   ########.fr       */
+/*   Created: 2022/10/04 15:52:43 by raulcabrero       #+#    #+#             */
+/*   Updated: 2022/10/06 10:32:23 by raulcabrero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+/*
+	lst: el principio de la lista.
+	Devuelve: Último nodo de la lista.
+	Devuelve el último nodo de la lista.
+*/
+t_list	*ft_lstlast(t_list *lst)
 {
-	size_t	i;
-
-	if (!s1 || !set)
-		return (0);
-	while (*s1 && ft_strchr(set, *s1))
-		s1++;
-	i = ft_strlen(s1);
-	while (i && ft_strchr(set, s1[i]))
-		i--;
-	return (ft_substr(s1, 0, i + 1));
+	if (lst)
+		while (lst->next)
+			lst = lst->next;
+	return (lst);
 }
+
+/*
+int	main(void)
+{
+	return (0);
+}
+*/

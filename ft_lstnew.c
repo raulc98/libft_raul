@@ -3,36 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
+/*   By: rcabrero <rcabrero@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 19:46:22 by raulcabrero       #+#    #+#             */
-/*   Updated: 2022/09/27 20:56:52 by raulcabrero      ###   ########.fr       */
+/*   Updated: 2022/10/06 11:05:18 by rcabrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
 //BONUS
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*x;
 
-// TODO: PRUEBAAAA
-// typedef struct  s_list
-// {
-//     void			*content;
-//     struct s_list	*next;
-// }			t_list;
-
-// t_list *ft_lstnew(void *content)
-// {
-// 	//declaro una estructura de tipo t_list
-// 	t_list *list;
-// 	//declaro y lo pongo a null
-// 	//TODO: Lo mismo no vale.
-// 	list = NULL;
-// }
+	x = malloc(sizeof(t_list));
+	if (!x)
+		return (NULL);
+	x->content = content;
+	x->next = NULL;
+	return (x);
+}
 
 /*
 int	main(void)
 {
+	char	str[] = "lorem ipsum dolor sit";
+	t_list	*elem;
+
+	elem = ft_lstnew((void *)str);
+	//Parsear y tal........
+	printf("\nname : %s",(char *)elem->content);
 	return (0);
 }
 */

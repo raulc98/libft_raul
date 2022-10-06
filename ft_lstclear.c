@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcabrero <rcabrero@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 15:42:32 by raulcabrero       #+#    #+#             */
-/*   Updated: 2022/10/06 18:22:05 by rcabrero         ###   ########.fr       */
+/*   Created: 2022/10/06 10:53:02 by raulcabrero       #+#    #+#             */
+/*   Updated: 2022/10/06 18:03:37 by rcabrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+/*
+Elimina y libera el nodo ’lst’ dado y todos los
+consecutivos de ese nodo, utilizando la función
+’del’ y free(3).
+Al final, el puntero a la lista debe ser NULL.
+*/
+void ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	char	*ret;
+	t_list	*temp;
 
-	if (!s)
-		return (0);
-	if (ft_strlen(s) < start)
-		len = 0;
-	if (ft_strlen(s + start) < len)
-		len = ft_strlen(s + start);
-	ret = malloc(sizeof(char) * (len + 1));
-	if (!ret)
-		return (0);
-	ft_strlcpy(ret, s + start, len + 1);
-	return (ret);
+	if (!del)
+		return ;
+	while (*lst != NULL)
+	{
+		del((*lst)->content);
+		temp = *lst;
+		*lst = temp->next;
+		free(temp);
+	}
+	*lst = NULL;
 }
+
+/*
+int	main(void)
+{
+	return (0);
+}
+*/

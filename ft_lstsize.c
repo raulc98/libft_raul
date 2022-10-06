@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcabrero <rcabrero@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 15:42:32 by raulcabrero       #+#    #+#             */
-/*   Updated: 2022/10/06 18:22:05 by rcabrero         ###   ########.fr       */
+/*   Created: 2022/10/04 13:32:53 by raulcabrero       #+#    #+#             */
+/*   Updated: 2022/10/06 17:46:35 by rcabrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+//lst: el principio de la lista.
+//Valor devuelto: La longitud de la lista.
+//Cuenta el número de nodos de una lista.
+int ft_lstsize(t_list *lst)
 {
-	char	*ret;
+	int		i;
+	t_list	*temp;
 
-	if (!s)
-		return (0);
-	if (ft_strlen(s) < start)
-		len = 0;
-	if (ft_strlen(s + start) < len)
-		len = ft_strlen(s + start);
-	ret = malloc(sizeof(char) * (len + 1));
-	if (!ret)
-		return (0);
-	ft_strlcpy(ret, s + start, len + 1);
-	return (ret);
+	i = 0;
+	temp = lst;
+	while (temp != NULL)
+	{
+		i++;
+		temp = temp->next;
+	}
+	return (i);
 }
+/*
+int	main(void)
+{
+	return (0);
+}
+*/

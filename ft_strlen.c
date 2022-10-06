@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
+/*   By: rcabrero <rcabrero@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 17:37:04 by rcabrero          #+#    #+#             */
-/*   Updated: 2022/09/29 20:02:12 by raulcabrero      ###   ########.fr       */
+/*   Updated: 2022/10/06 17:28:22 by rcabrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

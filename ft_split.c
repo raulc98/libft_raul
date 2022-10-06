@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
+/*   By: rcabrero <rcabrero@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 22:34:06 by raulcabrero       #+#    #+#             */
-/*   Updated: 2022/10/03 19:39:04 by raulcabrero      ###   ########.fr       */
+/*   Updated: 2022/10/06 17:28:42 by rcabrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//TODO: Borrar.
+//TODO: Borrar
 #include <stdio.h>
 
 static int	count_words(const char *str, char c)

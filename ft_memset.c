@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raulcabrerorouco <raulcabrerorouco@stud    +#+  +:+       +#+        */
+/*   By: rcabrero <rcabrero@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 18:05:37 by rcabrero          #+#    #+#             */
-/*   Updated: 2022/10/03 11:24:37 by raulcabrero      ###   ########.fr       */
+/*   Updated: 2022/10/06 11:35:51 by rcabrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

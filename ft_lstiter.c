@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcabrero <rcabrero@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 15:42:32 by raulcabrero       #+#    #+#             */
-/*   Updated: 2022/10/06 18:22:05 by rcabrero         ###   ########.fr       */
+/*   Created: 2022/10/06 11:03:10 by raulcabrero       #+#    #+#             */
+/*   Updated: 2022/10/06 18:07:56 by rcabrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+/*
+	Itera la lista ’lst’ y aplica la función ’f’ en el
+	contenido de cada nodo.
+*/
+void ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	char	*ret;
+	t_list *next;
 
-	if (!s)
-		return (0);
-	if (ft_strlen(s) < start)
-		len = 0;
-	if (ft_strlen(s + start) < len)
-		len = ft_strlen(s + start);
-	ret = malloc(sizeof(char) * (len + 1));
-	if (!ret)
-		return (0);
-	ft_strlcpy(ret, s + start, len + 1);
-	return (ret);
+	if (lst != NULL)
+	{
+		next = lst;
+		while (1)
+		{
+			(*f)(next->content);
+			next = next->next;
+			if (next == NULL)
+				return ;
+		}
+	}
 }
+/*
+int	main(void)
+{
+	return (0);
+}
+*/
